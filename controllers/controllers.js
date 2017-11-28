@@ -1,6 +1,6 @@
 var express 		= require('express'),
 	router 			= express.Router(),
-	diagnoser 		= require('../models/diagnoser.js'),
+	diagnoser 		= require('../models/user'),
 	request 		= require("request"),
 	passport 		= require("../config/passport"),
 	isAuthenticated = require("../config/middleware/isAuthenticated"),
@@ -15,7 +15,7 @@ router.post('/register', function(req, res) {
 		age: req.body.age, 
 		password: req.body.password
 	}
-	diagnoser.addUser(userData, (newlyCreatedId)=>{
+	user.addUser(userData, (newlyCreatedId)=>{
 		current_user_id = newlyCreatedId;
 		res.render('login', {loggedIn:false})
 	});
