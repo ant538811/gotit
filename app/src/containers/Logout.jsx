@@ -6,7 +6,9 @@ class Logout extends Component {
 	render() {
 		return (
 				<div className ="Logout">
-					<Jumbotron />
+					<div class ="container">
+						<Jumbotron />
+					</div>
 				</div>
 		);
 	}

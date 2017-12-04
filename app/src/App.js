@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import loadingGif from './components/loadingGif.gif';
 
 import Form from './components/Form.jsx';
 import Jumbotron from './components/Jumbotron.jsx';
@@ -16,18 +17,16 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <img src={loadingGif} className="App-logo" alt="logo" />
+          <h1 className="App-title">WELCOME TO YOUR WORKFORCE</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
 
+        <br/><br/>
+        <br/><br/>
+        
         <Form />
-        <Jumbotron />
-        <Router><Navbar /></Router>
-        <Buttongroup />
-        <Progressbar />
+
+        
 
 
       </div>

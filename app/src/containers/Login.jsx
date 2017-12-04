@@ -6,7 +6,12 @@ class Login extends Component {
 	render() {
 		return (
 			<div className = "Login">
-				<Form />
+				<div className = "container">
+					<h1> Please Clock In </h1>
+					<Buttongroup />
+					<Form />
+				</div>
+
 			</div>
 		);
 	}
