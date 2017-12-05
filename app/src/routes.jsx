@@ -20,7 +20,7 @@ export default () => {
 		<Route path ="/productivity" component = {Productivity}>
 		<Route path ="/login" component = {Login}>
 		<Route path ="/logout" component = {LogOut}>
-	</Route>;
+	</Route>
 
 
 
