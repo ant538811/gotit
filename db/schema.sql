@@ -17,7 +17,7 @@ primary key (user_id)
 
 create table positions(
 position_id integer auto_increment not null,
-time bigint default 0,
+time bigint default null,
 fk_user_id integer,
 fk_team_id integer,
 role varchar (255),
