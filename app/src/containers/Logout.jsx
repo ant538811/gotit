@@ -1,7 +1,7 @@
 import React from 'react';
-import Jumbotron from './components/Jumbotron.jsx';
+import Jumbotron from '../components/Jumbotron.jsx';
 
-import MasterCSS from 'MasterCSS.css';
+import MasterCSS from './MasterCSS.css';
 
 
 class Logout extends Component {

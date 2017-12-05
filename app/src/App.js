@@ -12,7 +12,14 @@ import Progressbar from './components/Progressbar.jsx';
 import Panel from './components/Panel.jsx';
 
 
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { Link } from 'react-router-dom';
+
+import Home from './containers/Home.jsx';
+import Messages from './containers/Home.jsx';
+import Productivity from './containers/Home.jsx';
+import Login from './containers/Home.jsx';
+import Logout from './containers/Home.jsx';
 
 
 class App extends Component {
@@ -29,6 +36,18 @@ class App extends Component {
         <br/><br/>
         
         <Form />
+
+        <Router>
+        	<div>
+        		<Navbar />
+        		<Route exact path="/" component={Home} />
+        		<Route exact path="/home" component={Home} />
+        		<Route exact path="/messages" component={Messages} />
+        		
+        		
+
+        	</div>
+        </Router>
         
 
 

@@ -14,12 +14,12 @@ export default function () {
 		        <span className="icon-bar"></span>
 		        <span className="icon-bar"></span>
 		      </button>
-		      <a className="navbar-brand" href="#">Got It</a>
+		      <a className="navbar-brand" href="/">Got It</a>
 		    </div>
 
 		    <div className="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 		      <ul className="nav navbar-nav">
-		        <li> <Link to ="/">Home</Link></li>
+		        <li> <Link to ="/home">Home</Link></li>
 		        <li> <Link to ="/messages">Messages</Link></li>
 		        <li> <Link to ="/productivity">Productivity</Link></li>
 		        <li> <Link to ="/login">Log In</Link></li>

@@ -1,8 +1,8 @@
 import React from 'react';
-import Form from './components/Form.jsx';
+import Form from '../components/Form.jsx';
 
 
-import MasterCSS from 'MasterCSS.css';
+import MasterCSS from './MasterCSS.css';
 
 class Login extends Component {
 	render() {
