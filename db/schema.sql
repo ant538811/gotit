@@ -25,7 +25,7 @@ primary key (position_id)
 );
 
 create table teams(
-team_id integer not null,
+team_id integer auto_increment not null,
 fk_position_id integer,
 primary key (team_id),
 foreign key (fk_position_id) references positions(position_id)
