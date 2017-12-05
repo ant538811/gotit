@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from './components/Navbar.jsx';
 
 
+import MasterCSS from 'MasterCSS.css';
+
 class Messages extends Component {
 	render() {
 		return (

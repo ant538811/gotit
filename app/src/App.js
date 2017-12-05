@@ -9,7 +9,10 @@ import Navbar from './components/Navbar.jsx';
 import Buttongroup from './components/Buttongroup.jsx';
 import Progressbar from './components/Progressbar.jsx';
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import Panel from './components/Panel.jsx';
+
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
 class App extends Component {
@@ -26,8 +29,9 @@ class App extends Component {
         
         <Form />
 
-        
 
+
+        
 
       </div>
     );

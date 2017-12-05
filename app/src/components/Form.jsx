@@ -25,7 +25,7 @@ export default function () {
 			      </div>
 			    </div>
 			  </form>
-		</div>
+		</div>;
 
 	
 }
