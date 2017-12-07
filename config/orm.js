@@ -21,7 +21,7 @@ var orm = {
 		}
 		throw error;
 	},
-	// assigns a user a position to a team
+	// assigns a user a position to a team given a user's id and a team's id
 	addPosition : function(positionData, cbFunc){
 		let sql = "INSERT INTO positions (role, fk_user_id, fk_team_id, time)" + "VALUES (?, ?, ?, ?)"
 		connection.query(sql, [positionData.role, positionData.fk_user_id, positionData.fk_team_id, Date.now()], (error, results, fields)=>{
