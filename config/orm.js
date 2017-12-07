@@ -22,7 +22,7 @@ var orm = {
 		throw error;
 	},
 	// assigns a user a position to a team
-	addPosition : function(userData, cbFunc){
+	addPosition : function(positionData, cbFunc){
 		let sql = "INSERT INTO positions (role, fk_user_id, fk_team_id, time)" + "VALUES (?, ?, ?, ?)"
 		connection.query(sql, [positionData.role, positionData.fk_user_id, positionData.fk_team_id, Date.now()], (error, results, fields)=>{
 			if (error){
@@ -35,10 +35,10 @@ var orm = {
 		});	
 	},
 	// creates a team
-	addTeam : function (userData, cbFunc){
+	addTeam : function (teamData, cbFunc){
 		let sql = "INSERT INTO teams (team_name)" +
 					"VALUES (?)"
-		connection.query(sql, [teamData.team_name], (error, results, fields)=>{
+		connection.query(sql, teamData.team_name, (error, results, fields)=>{
 				if (error){
 					console.log(error);
 					throw error;
@@ -53,4 +53,14 @@ var orm = {
 			cbFunc(res);
 		})
 	},
+	//removes a position from a team
+	quitTeam : function (positionId){
+		let sql = "DELETE FROM positions WHERE position_id = ?";
+		connection.query(sql, position_id, (error, results, fields)=>{
+			if (error){
+				console.log(error);
+				throw error;
+			}
+		});		
+	}
 }
