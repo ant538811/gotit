@@ -16,7 +16,7 @@ var model = {
 			cbFunc(res);
 		});
 	},
-	quitTeam : function(positionID){
+	dropPosition : function(positionID){
 		orm.deleteRequest(positionID);
 	}
 }

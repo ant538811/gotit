@@ -16,7 +16,10 @@ router.post('/register', function(req, res) {
 		age: req.body.age, 
 		password: req.body.password
 	}
-	user.addUser(userData, (newlyCreatedId)=>{
+	// teamData = {			use this when making the create team route
+	// 	team_name: req.body.team_name,
+	// }
+	model.addUser(userData, (newlyCreatedId)=>{
 		current_user_id = newlyCreatedId;
 		res.render('login', {loggedIn:false})
 	});
@@ -24,7 +27,7 @@ router.post('/register', function(req, res) {
 
 router.get("/login", function(req, res) {
 	// If the user already has an account send them to the members page
-	if (req.user) {
+	if (req.model) {
 	  res.redirect("/member", {loggedIn:true});
 	}else{
 		res.render("login", {loggedIn:false});

@@ -11,7 +11,6 @@ var orm = {
 					console.log(error);
 					throw error;
 				}
-				cbFunc(results.insertId);
 		});
 	},
 	//check if the password is correct
@@ -29,9 +28,6 @@ var orm = {
 				console.log(error);
 				throw error;
 			}
-			if(cbFunc && (typeof cbFunc === "function")){
-				cbFunc(results.insertId);				
-			}
 		});	
 	},
 	// creates a team
@@ -43,7 +39,6 @@ var orm = {
 					console.log(error);
 					throw error;
 				}
-				cbFunc(results.insertId);
 		});
 	},
 	//get user information for the given username and send it to callback func. 
@@ -53,8 +48,8 @@ var orm = {
 			cbFunc(res);
 		})
 	},
-	//removes a position from a team
-	quitTeam : function (positionId){
+	//removes a user from a team
+	dropPosition : function (positionId){
 		let sql = "DELETE FROM positions WHERE position_id = ?";
 		connection.query(sql, position_id, (error, results, fields)=>{
 			if (error){
