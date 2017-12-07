@@ -30,7 +30,7 @@ var orm = {
 			}
 		});	
 	},
-	// creates a team
+	// creates a team given the team name
 	addTeam : function (teamData, cbFunc){
 		let sql = "INSERT INTO teams (team_name)" +
 					"VALUES (?)"
@@ -48,7 +48,7 @@ var orm = {
 			cbFunc(res);
 		})
 	},
-	//removes a user from a team
+	//removes the user from a team given the position id
 	dropPosition : function (positionId){
 		let sql = "DELETE FROM positions WHERE position_id = ?";
 		connection.query(sql, position_id, (error, results, fields)=>{
@@ -59,3 +59,5 @@ var orm = {
 		});		
 	}
 }
+
+module.exports = orm;

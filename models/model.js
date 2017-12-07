@@ -1,5 +1,6 @@
 var orm = require('../config/orm.js');
-
+// add the orm methods here
+// check orm.js for documentation of what each method does
 var model = {
 	addUser : function(userData, cbFunc){
 		orm.addUser(userData, (res)=>{

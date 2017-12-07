@@ -16,7 +16,7 @@ router.post('/register', function(req, res) {
 		age: req.body.age, 
 		password: req.body.password
 	}
-	// teamData = {			use this when making the create team route
+	// teamData = {			use this when making the create team route. This needs to be done for positionData as well with its properties
 	// 	team_name: req.body.team_name,
 	// }
 	model.addUser(userData, (newlyCreatedId)=>{
