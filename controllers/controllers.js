@@ -1,6 +1,6 @@
 var express 		= require('express'),
 	router 			= express.Router(),
-	diagnoser 		= require('../models/user'),
+	diagnoser 		= require('../models/model'),
 	request 		= require("request"),
 	passport 		= require("../config/passport"),
 	isAuthenticated = require("../config/middleware/isAuthenticated"),
