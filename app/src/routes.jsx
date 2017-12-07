@@ -1,27 +1,32 @@
 import React from 'react';
 import {Route, IndexRoute} from 'react-router';
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Switch} from "react-router-dom";
 
 
-import App from './containers/App';
-import App from './containers/Home';
-import App from './containers/messages';
-import App from './containers/productivity';
-import App from './containers/login';
-import App from './containers/logout';
+
+import Home from './containers/Home.jsx';
+import Messages from './containers/Messages.jsx';
+import Productivity from './containers/Productivity.jsx';
+import Login from './containers/Login.jsx';
+import Logout from './containers/Logout.jsx';
+
 
 
 
 
 export default () => {
-	return
-		<Route path ="/" component = {App}/>
-		<Route path ="/home" component = {Home}/>
-		<Route path ="/messages" component = {Messages}/>
-		<Route path ="/productivity" component = {Productivity}/>
-		<Route path ="/login" component = {Login}/>
-		<Route path ="/logout" component = {LogOut}/>
-	</Route>
+	return<Router>
+        	<div>
+        		<Route exact path="/" component={Home} />
+        		<Route exact path="/home" component={Home} />
+        		<Route exact path="/messages" component={Messages} />
+            <Route exact path="/productivity" component={Productivity} />
+            <Route exact path="/logout" component={Logout} />
+        		
+        		
+
+        	</div>
+        </Router>;
 
 
 

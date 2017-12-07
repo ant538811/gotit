@@ -1,11 +1,13 @@
 import React from 'react';
 import loadingGif from './loadingGif.gif';
+import { Link } from 'react-router-dom';
 import './Form.css';
 
 export default function () {
 
 	
 	return	<div className="container">
+	<div class="text-center">
   			<form>
 			    <div className="form-group row">
 			      <label for="inputUsername3" className="col-sm-2 col-form-label">Username</label>
@@ -21,11 +23,11 @@ export default function () {
 			    </div>
 			    <div className="form-group row">
 			      <div className="offset-sm-2 col-sm-10">
-			        <button type="submit" className="btn btn-primary">Sign in</button>
+			        <Link to ="/productivity"><button type="submit" className="btn btn-primary">Sign in</button></Link>
 			      </div>
 			    </div>
 			  </form>
-		</div>;
+		</div> </div>;
 
 	
 }

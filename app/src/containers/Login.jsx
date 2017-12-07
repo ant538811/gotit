@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Form from '../components/Form.jsx';
+import Buttongroup from '../components/Buttongroup.jsx';
 
 
 import MasterCSS from './MasterCSS.css';
@@ -9,9 +10,11 @@ class Login extends Component {
 		return (
 			<div className = "Login">
 				<div className = "container">
-					<h1> Please Clock In </h1>
-					<Buttongroup />
+					<h1> Please Sign In </h1> <br/> 
 					<Form />
+					<hr/>
+					<h1> Quicklinks </h1>
+					<Buttongroup />
 				</div>
 
 			</div>

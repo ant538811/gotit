@@ -16,10 +16,12 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 import Home from './containers/Home.jsx';
-import Messages from './containers/Home.jsx';
-import Productivity from './containers/Home.jsx';
-import Login from './containers/Home.jsx';
-import Logout from './containers/Home.jsx';
+import Messages from './containers/Messages.jsx';
+import Productivity from './containers/Productivity.jsx';
+import Login from './containers/Login.jsx';
+import Logout from './containers/Logout.jsx';
+
+import routes from './routes.jsx';
 
 
 class App extends Component {
@@ -27,32 +29,18 @@ class App extends Component {
     return (
 
       <div className="App">
-        <header className="App-header">
-          <img src={loadingGif} className="App-logo" alt="logo" />
-          <h1 className="App-title">WELCOME TO YOUR WORKFORCE</h1>
-        </header>
+          <Router>
+          <div>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/messages" component={Messages} />
+            <Route exact path="/Productivity" component={Productivity} />
+            <Route exact path="/Logout" component={Logout} />
+            
+            
 
-        <br/><br/>
-        <br/><br/>
-        
-        <Form />
-
-        <Router>
-        	<div>
-        		<Navbar />
-        		<Route exact path="/" component={Home} />
-        		<Route exact path="/home" component={Home} />
-        		<Route exact path="/messages" component={Messages} />
-        		
-        		
-
-        	</div>
+          </div>
         </Router>
-        
-
-
-        
-
       </div>
     );
   }
