@@ -8,7 +8,8 @@ var express 		= require('express'),
 
 router.post('/register', function(req, res) {
 	userData = {
-		name: req.body.first_name + " " + req.body.first_name, 
+		name: req.body.first_name + " " + req.body.first_name,
+		username: req.body.username, 
 		phone: req.body.phone, 
 		email: req.body.email, 
 		gender: req.body.gender,
