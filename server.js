@@ -17,7 +17,7 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
-//get heroku port is available
+//get heroku port is available, otherwise uses port 3000 for local use
 var port = process.env.PORT  || 3000;
 
 //use the 'public' folder as the static root for all static files like images...
@@ -27,7 +27,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(methodOverride("_method"));
 
-//setup handlebars
+//setup handlebars but may not be necessary since Justin designed our pages
 var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout : "main" }));
 app.set("view engine", "handlebars");

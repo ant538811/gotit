@@ -1,6 +1,6 @@
 var express 		= require('express'),
 	router 			= express.Router(),
-	diagnoser 		= require('../models/user'),
+	diagnoser 		= require('../models/model'),
 	request 		= require("request"),
 	passport 		= require("../config/passport"),
 	isAuthenticated = require("../config/middleware/isAuthenticated"),
@@ -8,14 +8,18 @@ var express 		= require('express'),
 
 router.post('/register', function(req, res) {
 	userData = {
-		name: req.body.first_name + " " + req.body.first_name, 
+		name: req.body.first_name + " " + req.body.first_name,
+		username: req.body.username, 
 		phone: req.body.phone, 
 		email: req.body.email, 
 		gender: req.body.gender,
 		age: req.body.age, 
 		password: req.body.password
 	}
-	user.addUser(userData, (newlyCreatedId)=>{
+	// teamData = {			use this when making the create team route. This needs to be done for positionData as well with its properties
+	// 	team_name: req.body.team_name,
+	// }
+	model.addUser(userData, (newlyCreatedId)=>{
 		current_user_id = newlyCreatedId;
 		res.render('login', {loggedIn:false})
 	});
@@ -23,7 +27,7 @@ router.post('/register', function(req, res) {
 
 router.get("/login", function(req, res) {
 	// If the user already has an account send them to the members page
-	if (req.user) {
+	if (req.model) {
 	  res.redirect("/member", {loggedIn:true});
 	}else{
 		res.render("login", {loggedIn:false});

@@ -31,7 +31,8 @@ primary key (team_id)
 );
 
 
-
+-- The following insert statements are just for testing the functionality of the database. It works. We just need to connect it with the other code. 
+-- Deploy to an online database host like JAWSdb and then paste the url to connection.js in the config directory.
 
 use gotit_db;
 insert into users(username, email, password, name, phone, gender, age)
