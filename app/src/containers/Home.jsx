@@ -22,12 +22,11 @@ class Home extends Component {
         <br/><br/>
         <br/><br/>
 				<div className = "container">
-					<h1> Please Sign In </h1> <br/> 
+					 <br/> 
 					<Form />
-					<hr/>
-					<h1> Quicklinks </h1>
-					<br/>
-					<Buttongroup />
+
+					
+					
 				</div>
 			</div>
 

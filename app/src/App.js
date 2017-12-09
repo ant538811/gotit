@@ -8,7 +8,6 @@ import Jumbotron from './components/Jumbotron.jsx';
 import Navbar from './components/Navbar.jsx';
 import Buttongroup from './components/Buttongroup.jsx';
 import Progressbar from './components/Progressbar.jsx';
-
 import Panel from './components/Panel.jsx';
 
 
@@ -29,6 +28,8 @@ class App extends Component {
     return (
 
       <div className="App">
+
+
           <Router>
           <div>
             <Route exact path="/" component={Home} />
@@ -36,8 +37,7 @@ class App extends Component {
             <Route exact path="/messages" component={Messages} />
             <Route exact path="/Productivity" component={Productivity} />
             <Route exact path="/Logout" component={Logout} />
-            
-            
+          
 
           </div>
         </Router>

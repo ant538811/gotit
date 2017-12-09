@@ -1,5 +1,6 @@
 import React from 'react';
 import './Buttongroup.css';
+import { Link } from 'react-router-dom';
 
 
 export default function () {
@@ -9,13 +10,13 @@ export default function () {
     			<button type="button" className="btn btn-default">Clock In</button>
   			</div>
   			<div className="btn-group" role="group">
-    			<button type="button" className="btn btn-default">Clock Out</button>
+    			<Link to ="/logout"><button type="button" className="btn btn-default">Clock Out</button></Link>
   			</div>
   			<div className="btn-group" role="group">
     			<button type="button" className="btn btn-default">Lunch Start</button>
   			</div>
         <div className="btn-group" role="group">
-          <button type="button" className="btn btn-default">Lunch End</button>
+          <Link to ="/logout"><button type="button" className="btn btn-default">Lunch End</button></Link>
         </div>
 		</div>;
 

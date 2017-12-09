@@ -9,7 +9,7 @@ class Logout extends Component {
 		return (
 
 				<div className ="Logout">
-					<div class ="container position-center">
+					<div class ="container ">
 						<Jumbotron />
 					</div>
 				</div>
